@@ -1,6 +1,4 @@
 let socket;
-let r = 0, g = 0, b = 0;
-
 
 function setup() {
     createCanvas(1366, 620);
@@ -34,16 +32,15 @@ let eraser_btn = document.getElementById("e_btn");
 eraser_btn.addEventListener("click", eraser);
 
 function pen() {
-    strokeWeight(2);
-    stroke(r,g,b);
+    console.log("pen selected");
+    strokeWeight(1);
+    stroke('black');
 }
 
 function eraser() {
-    strokeWeight(8);
-    r = 255;
-    g = 255;
-    b = 255;
-    stroke(r, g, b);
+    console.log("eraser selected");
+    strokeWeight(14);
+    stroke('white');
 }
 
 function draw() {
